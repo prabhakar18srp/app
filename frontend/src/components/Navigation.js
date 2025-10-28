@@ -148,18 +148,18 @@ const Navigation = () => {
                         <p className="text-sm font-medium text-white">{user.name}</p>
                         <p className="text-xs text-slate-400">{user.email}</p>
                       </div>
-                      <DropdownMenuItem onClick={() => navigate('/user-dashboard')} data-testid="user-dashboard-menu-item">
+                      <DropdownMenuItem onClick={() => navigate('/user-dashboard')} className="text-white" data-testid="user-dashboard-menu-item">
                         <LayoutDashboard className="w-4 h-4 mr-2" />
                         My Dashboard
                       </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setShowProfile(true)} data-testid="my-profile-menu-item">
+                      <DropdownMenuItem onClick={() => setShowProfile(true)} className="text-white" data-testid="my-profile-menu-item">
                         <User className="w-4 h-4 mr-2" />
                         My Profile
                       </DropdownMenuItem>
                       {user.is_admin && (
                         <>
                           <DropdownMenuSeparator className="bg-white/10" />
-                          <DropdownMenuItem onClick={() => navigate('/admin')} data-testid="admin-menu-item">
+                          <DropdownMenuItem onClick={() => navigate('/admin')} className="text-white" data-testid="admin-menu-item">
                             <Shield className="w-4 h-4 mr-2" />
                             Admin Dashboard
                           </DropdownMenuItem>
