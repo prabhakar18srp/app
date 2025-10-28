@@ -98,12 +98,12 @@ export default function CampaignBasics({ data, onChange }) {
             <div className="space-y-2">
               <Label className="text-base font-semibold text-slate-900">Category *</Label>
               <Select value={data.category} onValueChange={(value) => handleInputChange('category', value)}>
-                <SelectTrigger className="p-3" data-testid="campaign-category-select">
+                <SelectTrigger className="p-3 text-slate-900" data-testid="campaign-category-select">
                   <SelectValue placeholder="Select a category" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-white border-slate-200">
                   {categories.map((category) => (
-                    <SelectItem key={category} value={category}>
+                    <SelectItem key={category} value={category} className="text-slate-900 hover:bg-slate-100 focus:bg-slate-100 focus:text-slate-900">
                       {category}
                     </SelectItem>
                   ))}
