@@ -140,12 +140,12 @@ const DiscoverPage = () => {
             />
           </div>
           <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-            <SelectTrigger className="w-full md:w-48 bg-slate-800/50 border-slate-700 h-12" data-testid="category-filter">
+            <SelectTrigger className="w-full md:w-48 bg-slate-800/50 border-slate-700 h-12 text-slate-200" data-testid="category-filter">
               <SelectValue placeholder="All Categories" />
             </SelectTrigger>
             <SelectContent className="bg-[#0f172a] border-slate-700">
               {categories.map(category => (
-                <SelectItem key={category} value={category} className="capitalize">
+                <SelectItem key={category} value={category} className="capitalize text-white hover:bg-slate-700/50 focus:bg-slate-700/50 focus:text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </SelectItem>
               ))}
