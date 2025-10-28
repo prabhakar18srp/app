@@ -86,12 +86,12 @@ const AnalyticsPage = () => {
         {/* Campaign Selector */}
         <div className="bg-white border border-slate-200 rounded-2xl p-6 mb-8 shadow-sm">
           <Select value={selectedCampaign.id} onValueChange={handleCampaignChange}>
-            <SelectTrigger className="w-full bg-white border-slate-300 h-14 text-lg" data-testid="campaign-selector">
+            <SelectTrigger className="w-full bg-white border-slate-300 h-14 text-lg text-slate-900 data-[placeholder]:text-slate-600" data-testid="campaign-selector">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-white border-slate-200 max-h-80">
               {campaigns.map(campaign => (
-                <SelectItem key={campaign.id} value={campaign.id} className="text-base py-3">
+                <SelectItem key={campaign.id} value={campaign.id} className="text-slate-900 text-base py-3 hover:bg-slate-100 focus:bg-slate-100 focus:text-slate-900">
                   {campaign.title}
                 </SelectItem>
               ))}
