@@ -138,12 +138,12 @@ export default function CampaignBasics({ data, onChange }) {
                 Status *
               </Label>
               <Select value={data.status} onValueChange={(value) => handleInputChange('status', value)}>
-                <SelectTrigger className="p-3" data-testid="campaign-status-select">
+                <SelectTrigger className="p-3 text-slate-900" data-testid="campaign-status-select">
                   <SelectValue placeholder="Select a status" />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="draft">Draft</SelectItem>
-                  <SelectItem value="active">Active</SelectItem>
+                <SelectContent className="bg-white border-slate-200">
+                  <SelectItem value="draft" className="text-slate-900 hover:bg-slate-100 focus:bg-slate-100 focus:text-slate-900">Draft</SelectItem>
+                  <SelectItem value="active" className="text-slate-900 hover:bg-slate-100 focus:bg-slate-100 focus:text-slate-900">Active</SelectItem>
                 </SelectContent>
               </Select>
             </div>
