@@ -84,13 +84,13 @@ const AdminCampaigns = ({ campaigns, isLoading, onDelete, onView, onEdit }) => {
                       <DropdownMenuContent align="end" className="bg-slate-800 border-slate-700 text-white">
                         <DropdownMenuItem 
                           onClick={() => onView(campaign.id)}
-                          className="cursor-pointer hover:bg-slate-700"
+                          className="cursor-pointer hover:bg-slate-700 text-white"
                         >
                           <Eye className="mr-2 h-4 w-4" /> View
                         </DropdownMenuItem>
                         <DropdownMenuItem 
                           onClick={() => onEdit(campaign.id)}
-                          className="cursor-pointer hover:bg-slate-700"
+                          className="cursor-pointer hover:bg-slate-700 text-white"
                         >
                           <Edit className="mr-2 h-4 w-4" /> Edit
                         </DropdownMenuItem>
